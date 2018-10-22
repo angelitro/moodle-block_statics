@@ -1,0 +1,21 @@
+.cont {
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.form-item, .mform .fitem {
+  float: inherit;
+}
+.vacios {
+    float: left;
+    padding: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #f89a9a;
+}
+.vacios b {
+    color:red;       
+}
