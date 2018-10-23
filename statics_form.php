@@ -41,9 +41,9 @@ class statics_form extends moodleform {
 
         $mform->addElement('header','displayimagenes', get_string('loquever', 'block_statics'));
 
-        $mform->addElement('html', '<div class="cont">');
+        $mform->addElement('html', '<div class="cont"><span id="enum_cont">');
         $mform->addElement('static', 'description', get_string('enumsel', 'block_statics'));
-        //$mform->addElement('html', '<h5>Selecciona los tipos de archivos que deseas visualizar...</h5>');
+        $mform->addElement('html', '</span>');
         
 
         if ($find_images) {$mform->addElement('checkbox', 'imagenes', get_string('img', 'block_statics'));}

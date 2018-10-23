@@ -5,12 +5,16 @@
     margin-right: auto;
     margin-left: auto;
 }
+#enum_cont {
+    font-size: 107%;
+    color: #585858;
+}
 .form-item, .mform .fitem {
   float: inherit;
 }
 .vacios {
     float: left;
-    padding: 8px;
+    padding: 5px;
     margin-right: auto;
     margin-left: auto;
     border-radius: 10px 10px 10px 10px;
