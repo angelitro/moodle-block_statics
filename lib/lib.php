@@ -71,7 +71,7 @@ function block_statics_print_page($fromform, $return = false) {
 
 	$tiposFicheros = Array ();
 	$ficherosIma = Array("Imagen1"=>"PNG", "Imagen2"=>"JPG", "Imagen3"=>"GIF", "Imagen4"=>"BMP", "Imagen5"=>"EPS", "Imagen5"=>"PCX");
-	$ficherosDoc = Array("Documento1"=>"DOC", "Documento2"=>"DOCX", "Documento3"=>"ODT", "Documento4"=>"PDF", "Documento5"=>"TXT", "Documento5"=>"RTF");
+	$ficherosDoc = Array("Documento1"=>"DOC", "Documento2"=>"DOCX", "Documento3"=>"ODT", "Documento4"=>"PDF", "Documento5"=>"TXT", "Documento6"=>"RTF");
 	$ficherosVid = Array("Video1"=>"AVI","Video2"=>"MPG", "Video3"=>"MP4", "Video4"=>"OGG", "Video5"=>"MOV", "Video5"=>"OGV",  "Video6"=>"WMV",  "Video7"=>"MKV",  "Video8"=>"FLV", "Video9"=>"3GP", "Video10"=>"WEBM");
 	$ficherosAud = Array("Audio1"=>"MP3", "Audio2"=>"WMA", "Audio3"=>"AIFF", "Audio4"=>"AU", "Audio5"=>"OGG", "Audio6"=>"AAC", "Audio7"=>"WAV", "Audio8"=>"MIDI");
 	$ficherosCom = Array("Comprimidos1"=>"ZIP", "Comprimidos2"=>"RAR", "Comprimidos3"=>"7Z");
