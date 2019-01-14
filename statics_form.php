@@ -41,7 +41,7 @@ class statics_form extends moodleform {
 
         $mform->addElement('header','displayimagenes', get_string('loquever', 'block_statics'));
 
-        $mform->addElement('html', '<div class="block_statics"><span id="block_statics_enum_cont">');
+        $mform->addElement('html', '<div class="block_statics cont"><span id="block_statics_enum_cont">');
         $mform->addElement('static', 'description', get_string('enumsel', 'block_statics'));
         $mform->addElement('html', '</span>');
         

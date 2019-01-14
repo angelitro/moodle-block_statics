@@ -137,7 +137,7 @@ function block_statics_print_page($fromform, $return = false) {
 
 		if ($result){
 			
-		    $display .= html_writer::start_tag('div', array('class' => 'block_statics'));
+		    $display .= html_writer::start_tag('div', array('class' => 'block_statics cont'));
 		    $display .= html_writer::start_tag('h4');
 			$display .= clean_text($tipo." / ".$valor);
 			$display .= html_writer::end_tag('h4');
