@@ -16,7 +16,7 @@
  
 /**
  * @package   block_statics
- * @copyright 2018, angelitr0 <angel@angelitro.com>
+ * @copyright 2018, angelitr0 <angelluisfraile@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
  
@@ -26,7 +26,14 @@ require_once('statics_form.php');
  
 global $DB, $CFG, $COURSE, $PAGE;
 
-$PAGE->requires->js('/blocks/statics/js/bootstrap.min.js', true);
+
+$versionM=$CFG->version;
+
+if ($versionM < 2016120500) {
+    
+    $PAGE->requires->js('/blocks/statics/js/bootstrap.min.js', true);
+}
+
 
 $courseid = required_param('courseid', PARAM_INT);
 $blockid = required_param('blockid', PARAM_INT);

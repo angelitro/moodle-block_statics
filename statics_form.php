@@ -16,7 +16,7 @@
  
 /**
  * @package   block_statics
- * @copyright 2018, angelitr0 <angel@angelitro.com>
+ * @copyright 2018, angelitr0 <angelluisfraile@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
  
@@ -41,7 +41,7 @@ class statics_form extends moodleform {
 
         $mform->addElement('header','displayimagenes', get_string('loquever', 'block_statics'));
 
-        $mform->addElement('html', '<div class="cont"><span id="enum_cont">');
+        $mform->addElement('html', '<div class="block_statics"><span id="block_statics_enum_cont">');
         $mform->addElement('static', 'description', get_string('enumsel', 'block_statics'));
         $mform->addElement('html', '</span>');
         

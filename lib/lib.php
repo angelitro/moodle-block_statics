@@ -16,7 +16,7 @@
  
 /**
  * @package   block_statics
- * @copyright 2018, angelitr0 <angel@angelitro.com>
+ * @copyright 2018, angelitr0 <angelluisfraile@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
  
@@ -137,7 +137,7 @@ function block_statics_print_page($fromform, $return = false) {
 
 		if ($result){
 			
-		    $display .= html_writer::start_tag('div', array('class' => 'cont'));
+		    $display .= html_writer::start_tag('div', array('class' => 'block_statics'));
 		    $display .= html_writer::start_tag('h4');
 			$display .= clean_text($tipo." / ".$valor);
 			$display .= html_writer::end_tag('h4');
@@ -180,7 +180,7 @@ function block_statics_print_page($fromform, $return = false) {
 		$displayno = substr($displayno, 0, strlen($displayno)-2);
 		$display .= html_writer::start_tag('div', array('class' => 'clearfix'));
 		$display .= html_writer::end_tag('div');
-		$display .= html_writer::start_tag('div', array('class' => 'vacios'));
+		$display .= html_writer::start_tag('div', array('class' => 'block_statics vacios'));
 		$display .= html_writer::start_tag('h6');
 		$display .= clean_text(get_string('noex', 'block_statics')."<b>".$displayno."</b>");
 		$display .= html_writer::end_tag('h6');
