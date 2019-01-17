@@ -21,9 +21,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2018090502;
+$plugin->version = 20190117500;
 $plugin->requires = 2014051200; // Moodle 2.7.0 is required.
 $plugin->cron = 0;
 $plugin->component = 'block_statics';
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'v1.0';
+$plugin->release = 'v1.1';
