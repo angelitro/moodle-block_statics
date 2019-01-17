@@ -10,7 +10,7 @@
     color: #585858;
 }
 .block_statics .form-item, .block_statics .mform,  .block_statics .fitem {
-  float: inherit;
+    float: inherit;
 }
 .block_statics.vacios {
     float: left;
@@ -21,5 +21,5 @@
     background-color: #ffd6d6;
 }
 .block_statics.vacios b {
-    color:red;       
+    color: red;       
 }

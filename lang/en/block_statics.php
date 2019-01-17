@@ -13,17 +13,16 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
- 
 /**
  * @package   block_statics
- * @copyright 2018, angelitr0 <angel@angelitro.com>
+ * @copyright 2018, angelitr0 <angelluisfraile@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['entrar'] = '< Go >';
+$string['entrar'] = 'Statics report';
 $string['title'] = 'Statics';
 
-$string['pluginname'] = 'Statics block';
+$string['pluginname'] = 'Statics';
 
 
 $string['statics:addinstance'] = 'Add new Statics block';
@@ -58,3 +57,5 @@ $string['Videos'] = 'Video';
 
 $string['enumsel'] = 'Select the types of files you want to view ...';
 $string['noex'] = 'There are no files in the course of type: ';
+
+$string['privacy:metadata'] = 'The Statics block only displays data existing files in course.';

@@ -13,7 +13,6 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
- 
 /**
  * @package   block_statics
  * @copyright 2018, angelitr0 <angelluisfraile@gmail.com>
@@ -21,37 +20,31 @@
  */
  
 require_once('../../config.php');
-require_once($CFG->dirroot.'/blocks/statics/lib/lib.php');
+require_once($CFG->dirroot.'/blocks/statics/locallib.php');
 require_once('statics_form.php');
- 
+
 global $DB, $CFG, $COURSE, $PAGE;
 
-
-$versionM=$CFG->version;
+$versionM = $CFG->version;
 
 if ($versionM < 2016120500) {
-    
     $PAGE->requires->js('/blocks/statics/js/bootstrap.min.js', true);
 }
 
-
 $courseid = required_param('courseid', PARAM_INT);
 $blockid = required_param('blockid', PARAM_INT);
+require_capability('block/statics:viewstatics', context_course::instance($courseid));
 
-
- 
 if (!$course = $DB->get_record('course', array('id' => $courseid))) {
     print_error('invalidcourse', 'block_statics', $courseid);
 }
- 
+
 require_login($course);
 
 $PAGE->set_url('/blocks/statics/view.php', array('id' => $courseid));
 $PAGE->set_pagelayout('standard');
 $PAGE->set_title(get_string('titulo_grande', 'block_statics') . " de " . $course->shortname);
 $PAGE->set_heading(get_string('titulo_grande', 'block_statics') . " de " . $course->shortname);
-
-
 
 $statics = new statics_form();
 
@@ -61,7 +54,7 @@ $statics->set_data($toform);
 
 $site = get_site();
 
-if($statics->is_cancelled()) {
+if ($statics->is_cancelled()) {
 
     $courseurl = new moodle_url('/course/view.php', array('id' => $courseid));
     redirect($courseurl);
@@ -73,7 +66,6 @@ if($statics->is_cancelled()) {
     $statics->display();
     block_statics_print_page($fromform);
     echo $OUTPUT->footer();
-    
 
 } else {
 
@@ -82,4 +74,3 @@ if($statics->is_cancelled()) {
     echo $OUTPUT->footer();
 
 }
-

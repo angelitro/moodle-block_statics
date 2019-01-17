@@ -13,27 +13,23 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
- 
 /**
- * @package   block_mimodu
- * @copyright 2018, angelitr0 <angel@angelitro.com>
+ * @package   block_statics
+ * @copyright 2018, angelitr0 <angelluisfraile@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
- 
-    'block/statics:myaddinstance' => array(
+     'block/statics:myaddinstance' => array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => array(
             'user' => CAP_PREVENT
         ),
- 
-        'clonepermissionsfrom' => 'moodle/my:manageblocks'
+         'clonepermissionsfrom' => 'moodle/my:manageblocks'
     ),
- 
     'block/statics:addinstance' => array(
         'riskbitmask' => RISK_SPAM | RISK_XSS,
  
@@ -43,13 +39,9 @@ $capabilities = array(
             'editingteacher' => CAP_ALLOW,
             'manager' => CAP_ALLOW
         ),
- 
         'clonepermissionsfrom' => 'moodle/site:manageblocks'
     ),
-
-
     'block/statics:viewstatics' => array(
- 
         'captype' => 'read',
         'contextlevel' => CONTEXT_COURSE,
         'legacy' => array(
@@ -61,6 +53,5 @@ $capabilities = array(
             'manager' => CAP_ALLOW
         )
     )
- 
     
 );
