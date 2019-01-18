@@ -171,6 +171,7 @@ defined('MOODLE_INTERNAL') || die();
 
 			$display .= html_writer::end_tag('table');
 			$display .= html_writer::end_tag('div');
+            $result->close();
 
         } else {
 			
@@ -179,8 +180,6 @@ defined('MOODLE_INTERNAL') || die();
         }
 
     } //end foreach.
-
-    $result->close();
 
     if ($displayno) {
 		$displayno = substr($displayno, 0, strlen($displayno) - 2);
