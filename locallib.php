@@ -130,6 +130,7 @@ defined('MOODLE_INTERNAL') || die();
             $display .= html_writer::start_tag('table', array('class' => 'table table-hover', 'id' => 'archivos'));
 
             $cont = 0;
+            $contArch = 0;
             $nombArr = Array();
             $enlace = null;            
 		   
@@ -152,7 +153,7 @@ defined('MOODLE_INTERNAL') || die();
 
                     $enlace = moodle_url::make_pluginfile_url($res->contextid, $res->component, $res->filearea, $res->itemid, $res->filepath, $res->filename);
                 }
-
+              
                 if ($enlace) {
 
                     $display .= html_writer::start_tag('tr', array('id' => $res->filename));
@@ -160,9 +161,10 @@ defined('MOODLE_INTERNAL') || die();
                     $display .= clean_text("<a href='" . $enlace . "'> " . $res->filename . "</a>");
                     $display .= html_writer::end_tag('td');
                     $display .= html_writer::start_tag('td');
-                    $display .= $res->filesize > 1023 ? clean_text(round($res->filesize/1024) . " KB</td>") : clean_text(round($res->filesize) . " B</td>");	
+                    $display .= $res->filesize > 1023 ? clean_text(round($res->filesize / 1024) . " KB</td>") : clean_text(round($res->filesize) . " B</td>");	
                     $display .= html_writer::end_tag('td');
                     $display .= html_writer::end_tag('tr');
+                    $contArch ++ ;
                 }
 
             $cont ++;			
@@ -170,6 +172,9 @@ defined('MOODLE_INTERNAL') || die();
             }
 
 			$display .= html_writer::end_tag('table');
+			$display .= html_writer::start_tag('h6');	
+			$display .= clean_text($contArch . " " . $valor . " " . get_string('encontrado', 'block_statics') );
+			$display .= html_writer::end_tag('h6');
 			$display .= html_writer::end_tag('div');
             $result->close();
 
