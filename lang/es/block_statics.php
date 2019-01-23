@@ -21,6 +21,7 @@
 
 $string['entrar'] = 'Statics report';
 $string['title'] = 'Statics';
+$string['encontrado'] = 'encontrados';
 
 $string['pluginname'] = 'Statics';
 
